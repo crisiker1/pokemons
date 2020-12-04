@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 
+
+
 const routes: Routes = [
   {path: 'buscar', component: BuscarComponent },
   {path: 'add', component: AddComponent },

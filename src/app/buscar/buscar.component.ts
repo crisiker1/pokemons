@@ -13,6 +13,8 @@ export class BuscarComponent implements OnInit {
   arrayPokemons_copia: Array<any[]>;
   title: any = "holi";
 
+ 
+
   @Input()
   nombre: any = '';
 
@@ -31,6 +33,8 @@ export class BuscarComponent implements OnInit {
       this.arrayPokemons_copia = datos;
 
     })
+
+    
   }
 
 

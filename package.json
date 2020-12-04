@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.json --host 192.168.224.26",
+    "start": "ng serve --proxy-config proxy.conf.json --host 0.0.0.0",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -19,6 +19,8 @@
     "@angular/platform-browser": "~11.0.0-rc.2",
     "@angular/platform-browser-dynamic": "~11.0.0-rc.2",
     "@angular/router": "~11.0.0-rc.2",
+    "aws-sdk": "^2.799.0",
+    "file-saver": "^2.0.5",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -27,9 +29,9 @@
     "@angular-devkit/build-angular": "~0.1100.0-rc.2",
     "@angular/cli": "~11.0.0-rc.2",
     "@angular/compiler-cli": "~11.0.0-rc.2",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.19.7",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
@@ -42,5 +44,17 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crisiker1/pokemons.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crisiker1/pokemons/issues"
+  },
+  "homepage": "https://github.com/crisiker1/pokemons#readme"
 }
