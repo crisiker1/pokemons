@@ -33,8 +33,8 @@ export class AddComponent implements OnInit {
   ngOnInit(): void {
     //const AWS = require('aws-sdk');
     //const AwsService = window.AWS;
-    //AwsService.config.accessKeyId = 'AKIAI2XGFZJTESKTXTZA';
-    //AwsService.config.secretAccessKey = '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';
+    //AwsService.config.accessKeyId = 'AKIAI2XGFZJTESK';
+    //AwsService.config.secretAccessKey = 'BZ+mREHeo2WXycEi9cMmey5PiLokKaX1';
     //AwsService.config.region = 'us-east-1';
     //console.log(AwsService);
     //this.s3 = new AwsService.S3();
