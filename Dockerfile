@@ -9,4 +9,6 @@ RUN npm install -g @angular/cli
 
 RUN npm install
 
+EXPOSE 3000
+
 CMD ["ng", "serve"]
