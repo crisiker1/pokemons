@@ -1,6 +1,12 @@
-FROM node:lts-alpine
-RUN npm -y -g install serve
-WORKDIR /app/
-COPY . .
-EXPOSE 3000
-CMD ["serve","pokemons"]
+
+FROM node:alpine
+
+WORKDIR /usr/src/app
+
+COPY . /usr/src/app
+
+RUN npm install -g @angular/cli
+
+RUN npm install
+
+CMD ["ng", "serve"]
