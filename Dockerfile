@@ -1,14 +1,27 @@
+# Usa una imagen base de Node
+FROM node:14 as builder
 
-FROM node:alpine
+# Establece el directorio de trabajo
+WORKDIR /app
 
-WORKDIR /usr/src/app
-
-COPY . /usr/src/app
-
-RUN npm install -g @angular/cli
-
+# Copia el archivo package.json e instala las dependencias
+COPY package*.json ./
 RUN npm install
 
-EXPOSE 4200
+# Copia el resto de la aplicación
+COPY . .
 
-CMD ["ng", "serve"]
+# Construye la aplicación Angular en modo de producción
+RUN npm run build -- --prod
+
+# Utiliza una imagen más ligera para servir la aplicación
+FROM nginx:alpine
+
+# Copia los archivos construidos de la aplicación Angular al directorio de Nginx
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Expone el puerto 80
+EXPOSE 80
+
+# Comando para iniciar Nginx
+CMD ["nginx", "-g", "daemon off;"]
